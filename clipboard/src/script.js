@@ -1,4 +1,4 @@
-const basePath = '/Responsive-Web-Design/clipboard/';
+const basePath = '/clipboard/';
 
 /**  =================================================
  * load navigation bar by class .navigation

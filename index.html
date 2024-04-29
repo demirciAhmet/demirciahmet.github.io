@@ -14,5 +14,24 @@
     <div class="flex-container">
         <iframe src="https://web.tabliss.io/" id="iframe-tabliss"></iframe>
     </div>
+    <script>
+        // Wait for the iframe content to load
+        window.onload = function() {
+            // Get the iframe element
+            var iframe = document.getElementById('iframe-tabliss');
+
+            // Access the document within the iframe
+            var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+            // Find all anchor tags within the iframe content
+            var links = iframeDocument.getElementsByTagName('a');
+
+            // Loop through each anchor tag
+            for (var i = 0; i < links.length; i++) {
+                // Set the target attribute to "_blank"
+                links[i].setAttribute('target', '_blank');
+            }
+        };
+    </script>
 </body>
 </html>
